@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleof.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Cusro FullStack Modulo5</title>
+
+
+<!--  CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link href="/css/bootstrap-table.css" rel="stylesheet" th:href="@{/css/bootstrap-table.css}"/>
+
+<!-- Bootstrap CSS -->
+    <link href="/css/globalstyle.css" rel="stylesheet"/>
+    
+    <script  type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+	$.ajax({
+		type : "post",
+		url : "/departments/list",
+		success : function(response) {
+		$("#departmentsTable").bootstrapTable('load',response);
+		}
+		});
+	});
+</script>
+
+<div th:replace="fragments/header :: header">&nbsp;</div>
+
+
+<div class="container">
+<div class="panel panel-default">
+<div class="panel-body">
+<h3> Mantencion de Departamentos</h3>
+
+<div class="table-responsive" id="tableDivContainer">
+<table class="table table-condensed" id="departmentsTable" data-toggle="table">
+<thead>
+<tr>
+<th data-field="dept_no">Nº</th>
+<th data-field="dept_name">Nombre</th>
+</tr>
+</thead>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/bootstrap-table.js"></script>
+
+</body>
+</html>

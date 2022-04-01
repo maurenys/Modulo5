@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleof.org">
+<head>
+<meta name="viewport" content="width.device-width, initial-scale-1">
+<title>Insert title here</title>
+
+<!--  CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+    <link href="/css/globalstyle.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="container" th:fragment="header">
+<div class="container-fluid" style="background-color:steelblue;color:#fff;height:100%;"> 
+<h3> Mantenedor HR MySQL</h3>
+</div>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav">
+   
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Menu
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/">Inicio</a>
+        <a class="dropdown-item" href="/departments_page">Empleados</a>
+        <a class="dropdown-item" href="/jobs_page">Jobs</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+</div>
+<script  type="text/javascript" src="/CursoFullStack_Modulo5/src/main/resources/static/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/CursoFullStack_Modulo5/src/main/resources/static/js/bootstrap.js"></script>
+</body>
+</html>
