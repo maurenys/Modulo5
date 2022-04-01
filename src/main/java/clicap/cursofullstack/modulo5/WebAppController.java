@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class WebAppController {
+	
 	@RequestMapping("/")
 	public String getHome() {
 		return("index");
@@ -15,6 +16,12 @@ public class WebAppController {
 	public String getDepartments() {
 		return("departments_page");
 	}
+	
+	@RequestMapping("/titles_page")
+	public String getTitle() {
+		return("titles_page");
+	}
+	
 	
 }
 

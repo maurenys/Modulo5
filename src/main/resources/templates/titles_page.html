@@ -4,28 +4,27 @@
 <meta charset="ISO-8859-1">
 <title>Cusro FullStack Modulo5</title>
 
-
 <!--  CSS -->
 <link href="/css/bootstrap.css" rel="stylesheet"
 	th:href="@{/css/bootstrap.css}" />
 <link href="/css/bootstrap-table.css" rel="stylesheet"
 	th:href="@{/css/bootstrap-table.css}" />
-
 <!-- Bootstrap CSS -->
 <link href="/css/globalstyle.css" rel="stylesheet" />
-
+<!-- Bootstrap CSS -->
 <script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
 
 </head>
+
 <body>
 
 	<script type="text/javascript">
 		document.addEventListener("DOMContentLoaded", function(event) {
 			$.ajax({
 				type : "post",
-				url : "/departments/list",
+				url : "/title/list",
 				success : function(response) {
-					$("#departmentsTable").bootstrapTable('load', response);
+					$("#titleTable").bootstrapTable('load', response);
 				}
 			});
 		});
@@ -37,15 +36,15 @@
 	<div class="container">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<h3>Mantencion de Departamentos</h3>
+				<h3>Mantencion de Titulos</h3>
 
 				<div class="table-responsive" id="tableDivContainer">
-					<table class="table table-condensed" id="departmentsTable"
+					<table class="table table-condensed" id="titleTable"
 						data-toggle="table">
 						<thead>
 							<tr>
-								<th data-field="dept_no">Nº</th>
-								<th data-field="dept_name">Nombre</th>
+								<th data-field="title_no">Numero</th>
+								<th data-field="title">Nombre</th>
 							</tr>
 						</thead>
 					</table>
