@@ -10,6 +10,14 @@ public class TitleDto {
 		
 	}
 
+	
+	public TitleDto(String title_no, String title) {
+		super();
+		this.title_no = title_no;
+		this.title = title;
+	}
+
+
 	public String getTitle_no() {
 		return title_no;
 	}

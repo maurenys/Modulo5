@@ -17,9 +17,9 @@ public class TitleController {
 	TitleService titleService;
 
 	@RequestMapping("/list")
-	public @ResponseBody List<TitleDto> list(){
+	public @ResponseBody List<TitleDto> list() {
 		return titleService.list();
-	
+
 	}
 
 }

@@ -18,7 +18,7 @@ public class TitleDaoImpl implements TitleDao {
 	private String insert = "INSERT INTO title_types VALUES (?,?)";
 	private String update = "UPDATE title_types SET title=? WHERE title_no=?";
 	private String select = "SELECT * FROM title_types WHERE title_no=?";
-	private String delete = "DELETE title_types WHERE title_no=?";
+	private String delete = "DELETE FROM title_types WHERE title_no=?";
 	private String list = "SELECT * FROM title_types";
 
 	@Autowired
@@ -33,6 +33,8 @@ public class TitleDaoImpl implements TitleDao {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+
 
 	@Override
 	public TitleDto get(String title_no) {
